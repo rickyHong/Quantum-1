@@ -1,6 +1,6 @@
 English | [简体中文](README_CN.md)
 
-# Paddle Quantum (量桨)
+# Paddle Quantum (量桨) - update
 
 - [Features](#features)
 - [Install](#install)
