@@ -1,4 +1,5 @@
-# Copyright (c) 2021 Institute for Quantum Computing, Baidu Inc. All Rights Reserved.
+# !/usr/bin/env python3
+# Copyright (c) 2020 Institute for Quantum Computing, Baidu Inc. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,16 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""
+r"""
 Main
 """
 
 import numpy
 from paddle_quantum.VQSD.HGenerator import generate_rho_sigma
 from paddle_quantum.VQSD.Paddle_VQSD import Paddle_VQSD
+   
 
 
-def main():
+if __name__ == '__main__':
     """
     main
     """
@@ -33,7 +35,3 @@ def main():
 
     print("The estimated spectrum is:", numpy.real(numpy.diag(rho_tilde_np)))
     print('The target spectrum is:', D)
-
-
-if __name__ == '__main__':
-    main()

@@ -1,4 +1,5 @@
-# Copyright (c) 2021 Institute for Quantum Computing, Baidu Inc. All Rights Reserved.
+#!/usr/bin/env python
+# Copyright (c) 2020 Institute for Quantum Computing, Baidu Inc. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""
+r"""
 Install library to site-packages
 """
 
@@ -23,18 +24,84 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='paddle-quantum',
-    version='2.1.0',
+    version='2.4.0',
     author='Institute for Quantum Computing, Baidu INC.',
-    author_email='quantum@baidu.com',
+    author_email='qml@baidu.com',
     description='Paddle Quantum is a quantum machine learning (QML) toolkit developed based on Baidu PaddlePaddle.',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='http://qml.baidu.com',
-    packages=['paddle_quantum', 'paddle_quantum.GIBBS', 'paddle_quantum.QAOA', 'paddle_quantum.SSVQE',
-              'paddle_quantum.VQE', 'paddle_quantum.VQSD', 'paddle_quantum.GIBBS.example',
-              'paddle_quantum.QAOA.example', 'paddle_quantum.SSVQE.example', 'paddle_quantum.VQE.example',
-              'paddle_quantum.VQSD.example'],
-    install_requires=['paddlepaddle>=2.0.1', 'scipy', 'networkx>=2.5', 'matplotlib', 'interval', 'tqdm'],
+    packages=[
+        'paddle_quantum',
+        'paddle_quantum.ansatz',
+        'paddle_quantum.backend',
+        'paddle_quantum.biocomputing',
+        'paddle_quantum.channel',
+        'paddle_quantum.channel.functional',
+        'paddle_quantum.data_analysis',
+        'paddle_quantum.finance',
+        'paddle_quantum.gate',
+        'paddle_quantum.gate.functional',
+        'paddle_quantum.locc',
+        'paddle_quantum.loss',
+        'paddle_quantum.operator',
+        'paddle_quantum.qchem',
+        'paddle_quantum.qml',
+        'paddle_quantum.qpp',
+        'paddle_quantum.qsvt',
+        'paddle_quantum.state',
+        'paddle_quantum.GIBBS',
+        'paddle_quantum.GIBBS.example',
+        'paddle_quantum.QAOA',
+        'paddle_quantum.QAOA.example',
+        'paddle_quantum.SSVQE',
+        'paddle_quantum.SSVQE.example',
+        'paddle_quantum.VQE',
+        'paddle_quantum.VQE.example',
+        'paddle_quantum.VQSD',
+        'paddle_quantum.VQSD.example',
+        'paddle_quantum.mbqc',
+        'paddle_quantum.mbqc.gates',
+        'paddle_quantum.mbqc.gates.mcalculus_tests',
+        'paddle_quantum.mbqc.gates.simulator_tests',
+        'paddle_quantum.mbqc.GRCS',
+        'paddle_quantum.mbqc.GRCS.example',
+        'paddle_quantum.mbqc.GRCS.example.rectangular',
+        'paddle_quantum.mbqc.GRCS.example.rectangular.depth10',
+        'paddle_quantum.mbqc.QAOA',
+        'paddle_quantum.mbqc.QAOA.example',
+        'paddle_quantum.mbqc.QKernel',
+        'paddle_quantum.mbqc.QKernel.example',
+        'paddle_quantum.mbqc.VQSVD',
+        'paddle_quantum.mbqc.VQSVD.example',
+    ],
+    package_data={
+        'paddle_quantum.biocomputing': ['*.txt'],
+        'paddle_quantum.VQE': ['*.xyz'],
+        'paddle_quantum.VQE.example': ['*.xyz'],
+        'paddle_quantum.mbqc.GRCS.example': ['*.txt'],
+        'paddle_quantum.mbqc.GRCS.example.rectangular.depth10': ['*.txt'],
+        'paddle_quantum.mbqc.QKernel.example': ['*.txt'],
+        'paddle_quantum.mbqc.VQSVD.example': ['*.txt'],
+    },
+    install_requires=[
+        'paddlepaddle>=2.2.0, <=2.3.0',
+        'protobuf>=3.1.0, <=3.20.1',
+        'qcompute',
+        'networkx>=2.5',
+        'matplotlib>=3.3.0',
+        'scipy',
+        'tqdm',
+        'openfermion',
+        'pyscf; platform_system == "Linux" or platform_system == "Darwin"',
+        'paddlenlp',
+        'opencv-python',
+        'scikit-learn',
+        'fastdtw',
+        'cvxpy',
+        'rich',
+        'imbalanced-learn',
+    ],
     python_requires='>=3.6, <4',
     classifiers=[
         'Programming Language :: Python :: 3',
@@ -44,4 +111,6 @@ setuptools.setup(
     project_urls={
         'Documentation': 'https://qml.baidu.com/api/introduction.html',
         'Source': 'https://github.com/PaddlePaddle/Quantum/',
-        'Tracker': 'https://github.com/PaddlePaddle/Quantum/issues'},)
+        'Tracker': 'https://github.com/PaddlePaddle/Quantum/issues',
+    },
+)

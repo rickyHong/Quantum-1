@@ -1,6 +1,15 @@
-paddlepaddle>=2.0.1
-scipy
+paddlepaddle>=2.2.0, <=2.3.0
+protobuf>=3.1.0, <=3.20.1
+qcompute
 networkx>=2.5
-matplotlib
-interval
+matplotlib>=3.3.0
+scipy
 tqdm
+openfermion
+pyscf; platform_system == "Linux" or platform_system == "Darwin"
+paddlenlp
+scikit-learn
+opencv-python
+cvxpy
+rich
+imbalanced-learn

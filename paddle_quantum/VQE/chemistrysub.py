@@ -1,4 +1,5 @@
-# Copyright (c) 2021 Institute for Quantum Computing, Baidu Inc. All Rights Reserved.
+# !/usr/bin/env python3
+# Copyright (c) 2020 Institute for Quantum Computing, Baidu Inc. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,9 +27,12 @@ __all__ = [
 
 
 def H_generator():
-    """
-    Generate a Hamiltonian with trivial descriptions
-    :return: a Hamiltonian, 'mat'
+    r"""Generate a Hamiltonian with trivial descriptions
+    
+    Returns:
+        Tuple: including following elements
+            - H: the Hamiltonian
+            - rho: density matrix
     """
 
     beta = 1
@@ -46,9 +50,12 @@ def H_generator():
 
 
 def H2_generator():
-    """
-    Generate a Hamiltonian with trivial descriptions
-    Returns: A Hamiltonian, 'mat'
+    r"""Generate a Hamiltonian with trivial descriptions
+    
+    Returns: 
+        tuple contains
+            - H: Hamiltonian, a list of Pauli string
+            - N: the number of qubits
     """
 
     beta = 1
@@ -72,7 +79,7 @@ def H2_generator():
     #     + (0.12293305056183798) * kron(kron(kron(sigma_I, sigma_Z), sigma_I), sigma_Z) \
     #     + (0.17627640804319591) * kron(kron(kron(sigma_I, sigma_I), sigma_Z), sigma_Z)
     H = [
-        [-0.04207897647782277, 'i0'],
+        [-0.04207897647782277, 'i'],
         [0.17771287465139946, 'z0'],
         [0.1777128746513994, 'z1'],
         [-0.2427428051314046, 'z2'],
