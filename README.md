@@ -1,6 +1,7 @@
 English | [简体中文](README_CN.md)
 
 QSANN - https://github.com/PaddlePaddle/Quantum/blob/master/applications/text_classification/introduction_en.ipynb
+https://github.com/PaddlePaddle/Quantum/blob/master/paddle_quantum/qml/qsann.py
 
 # Paddle Quantum (量桨) - update
 
