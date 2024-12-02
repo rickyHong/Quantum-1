@@ -1,5 +1,7 @@
 English | [简体中文](README_CN.md)
 
+QSANN - https://github.com/PaddlePaddle/Quantum/blob/master/applications/text_classification/introduction_en.ipynb
+
 # Paddle Quantum (量桨) - update
 
 - [Features](#features)
